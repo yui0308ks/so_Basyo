@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class UketukeController {
+public class TestController {
 
 	@Autowired
-	private UketukeService uketukeService;
+	private TestService testService;
 
 //	@RequestMapping(path = "/test", method = RequestMethod.GET)
-	@GetMapping("/uketuke")
+	@GetMapping("/test")
 	String index(Model model) {
-		List<Uketuke> list = this.uketukeService.getUketukeList();
+		List<Test> list = this.testService.getTestList();
 	    model.addAttribute("list", list);
-	    return "uketuke/index";
+	    return "test/index";
 	}
 }

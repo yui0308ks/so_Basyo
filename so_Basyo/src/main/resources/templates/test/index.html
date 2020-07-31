@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript" src="/js/index.js"></script>
+	<table class="list">
+	  <tbody><tr>
+	    <th class="r1" style="width: 5%">TESTNO</th>
+		<th class="r1" style="width: 10%">名前</th>
+	  </tr>
+	  <tr th:each="list:${list}">
+	    <td><a href="/member" th:href="@{/member}" th:text="${list.testNo}"></a></td>
+		<td th:text="${list.Test_No}"></td>
+	    <td th:text="${list.Name}"></td>
+	  </tr>
+	</tbody></table>
+	<div class="button">
+		<a href="./member" th:href="@{/member}" class="btn-circle-flat">新規登録</a>
+	</div>
+</body>
+</html>
