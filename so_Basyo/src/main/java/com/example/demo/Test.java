@@ -15,5 +15,5 @@ public class Test {
 	}
 	private int testNo;
 	private String name;
-
 }
+

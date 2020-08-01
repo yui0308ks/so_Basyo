@@ -18,4 +18,6 @@ public class TestMapper implements RowMapper<List<Test>> {
 		} while (rs.next());
 		return list;
 	}
-}	
+}
+
+
